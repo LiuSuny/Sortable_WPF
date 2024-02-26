@@ -1,0 +1,59 @@
+﻿<Window x:Class="Sortable_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sortable_WPF"
+        mc:Ignorable="d"
+        Title="Sortable Table" Height="500" Width="600" >
+
+
+    <Grid>
+        <TextBlock Text="SORTABLE PROFILE DATA"
+                   Margin="15 12 0 0"/>
+        <Grid Margin="10 35 ">
+        <ListView Name="sortableUserData" Background="LightSkyBlue">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="120" 
+                                    DisplayMemberBinding="{Binding Name}">
+                        <GridViewColumn.Header>
+                            <GridViewColumnHeader Tag="Name" 
+                                                  Click="UserSortable_Table_Click">Name</GridViewColumnHeader>
+                        </GridViewColumn.Header>
+                    </GridViewColumn>
+                    <GridViewColumn Width="80" 
+                                    DisplayMemberBinding="{Binding Age}">
+                        <GridViewColumn.Header>
+                            <GridViewColumnHeader Tag="Age" 
+                                                  Click="UserSortable_Table_Click">Age</GridViewColumnHeader>
+                        </GridViewColumn.Header>
+                    </GridViewColumn>
+                    <GridViewColumn Width="80"
+                                    DisplayMemberBinding="{Binding Sex}">
+                        <GridViewColumn.Header>
+                            <GridViewColumnHeader Tag="Sex" 
+                                                  Click="UserSortable_Table_Click">Sex</GridViewColumnHeader>
+                        </GridViewColumn.Header>
+                    </GridViewColumn>
+                        <GridViewColumn Width="80"
+                                    DisplayMemberBinding="{Binding PlaceOfBirth}">
+                            <GridViewColumn.Header>
+                                <GridViewColumnHeader Tag="PlaceOfBirth" 
+                                                  Click="UserSortable_Table_Click">Place Of Birth</GridViewColumnHeader>
+                            </GridViewColumn.Header>
+                        </GridViewColumn>
+                        <GridViewColumn Width="130"
+                                    DisplayMemberBinding="{Binding Mail}">
+                            <GridViewColumn.Header>
+                                <GridViewColumnHeader Tag="Mail" 
+                                                  Click="UserSortable_Table_Click">Mail</GridViewColumnHeader>
+                            </GridViewColumn.Header>
+                        </GridViewColumn>
+                    </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+    </Grid>
+
+</Window>
